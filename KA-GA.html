@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Tourism - Luxury Goa & Beyond Tour</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bg-orange { background-color: #ff610e !important; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #bafcff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Top Header */
+    .top-header {
+      background-color: #ff610e;
+      color: white;
+      padding: 10px 0;
+    }
+
+    .contact-group img {
+      width: 22px;
+      height: 22px;
+      margin-right: 8px;
+    }
+
+    .contact-group span {
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      font-family: monospace;
+    }
+
+   
+
+    /* Itinerary Section */
+    .itinerary {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .itinerary h2 {
+      text-align: center;
+      color: #003c32;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .day-card {
+      background: white;
+      border-left: 6px solid #ff610e;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .day-card:hover {
+      transform: scale(1.02);
+    }
+
+    .day-card h3 {
+      color: #007278;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .day-card p {
+      color: #333;
+      line-height: 1.6;
+      margin-left: 28px;
+      font-size: 18px;
+    }
+
+    /* Package Section */
+    .package h3 {
+      text-align: center;
+      color: #003c32;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .package-card {
+      background: #1bbcc5;
+      color: #003c32;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .package-card h4 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .package-card p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .package-note {
+      text-align: center;
+      margin-top: 15px;
+      font-style: italic;
+      color: #003c32;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #003c32;
+      color: #fff;
+      padding: 40px 20px 20px;
+    }
+
+    footer h4 {
+      color: #ff610e;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    footer a {
+      color: #ddd;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #ff610e;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #444;
+      margin-top: 20px;
+      padding-top: 10px;
+      font-size: 20px;
+      color: #aaa;
+    }
+ /* Navbar styling */
+    .navbar-nav .nav-link { color: #333 !important; font-weight: 600; }
+    .navbar-nav .nav-link:hover { color: #ff610e !important; }
+
+    /* Nested dropdowns */
+    .dropdown-submenu {
+      position: relative;
+    }
+    .dropdown-submenu > .dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin: 0;
+     
+    min-width: 180px !important;
+    
+      display: none;
+    }
+    
+    .dropdown-submenu:hover > .dropdown-menu {
+      display: block;
+    }
+    .dropdown-submenu .dropdown-item {
+      white-space: normal; /* Allow wrapping instead of overflow */
+      overflow-wrap: break-word;
+    }
+    .dropdown-submenu .dropdown-item:hover {
+      color: #ff610e;
+      font-weight: bold;
+    }
+
+    /* Responsive: submenus stack under parent on small screens */
+    @media (max-width: 991px) {
+      .dropdown-submenu > .dropdown-menu {
+        left: 0;
+        top: 100%;
+        width:100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top contact header -->
+<div class="bg-orange text-white d-flex align-items-center px-4 py-2">
+  <div class="d-flex align-items-center me-4">
+    <img src="Contact.png" alt="Contact" width="22" height="22" class="me-2">
+    <span class="fw-bold text-monospace">+91 8240147994</span>
+  </div>
+  <div class="d-flex align-items-center">
+    <img src="E-mail.png" alt="E-mail" width="22" height="22" class="me-2">
+    <span class="fw-bold text-monospace">royaltourism863@gmail.com</span>
+  </div>
+</div>
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm px-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="logohorizontal.png" alt="Royal Tourism Logo" height="60"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav fw-bold">
+        <!-- Trips Main Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Trips</a>
+          <ul class="dropdown-menu">
+
+            <!-- International Tours -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">International Tours</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Bali.html">Bali Tour</a></li>
+                <li><a class="dropdown-item" href="Bangkok.html">Bangkok-Pattaya Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Holy Pilgrimage Tours -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Holy Pilgrimage Tours</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="WESTUP.html">Mathura, Vrindavan, Barsana & Agra Tour</a></li>
+                <li><a class="dropdown-item" href="KedarnathYatra.html">Badrinath & Kedarnath Tour</a></li>
+                <li><a class="dropdown-item" href="NORTH-MH.html">Shirdi, Ellora & Nashik Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Hill Station Tours -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Hill Station Tours</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="SpitiValley.html">Spiti Valley Tour</a></li>
+                <li><a class="dropdown-item" href="JK.html">Kashmir Tour</a></li>
+                <li><a class="dropdown-item" href="Kashmir.html">Offbeat Kashmir Tour</a></li>
+                <li><a class="dropdown-item" href="HP-PB.html">Dharamshala, Khajjiar, Dalhousie & Amritsar Tour</a></li>
+                <li><a class="dropdown-item" href="HP.html">Shimla & Manali Tour</a></li>
+                <li><a class="dropdown-item" href="AS-AR.html">Assam & Arunachal Pradesh Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Historic Trails -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Historic Trails</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="RJ.html">Royal Rajasthan Heritage Tour</a></li>
+                <li><a class="dropdown-item" href="K.html">Khajuraho & Jabalpur Tour</a></li>
+                <li><a class="dropdown-item" href="KA.html">Hampi, Badami, Aihole & Bijapur Tour</a></li>
+                <li><a class="dropdown-item" href="GJ.html">Gujarat Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Coastal Escapes -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Coastal Escapes</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="KL.html">Kerala Tour</a></li>
+                <li><a class="dropdown-item" href="KA-GA.html">Coastal Karnataka & Goa Tour</a></li>
+                <li><a class="dropdown-item" href="GOA.html">Luxury Goa Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Nature Trails -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Nature Trails</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="JH.html">Ranchi & Netarhat Tour</a></li>
+                <li><a class="dropdown-item" href="Northeast.html">Manipur, Mizoram & Nagaland Tour</a></li>
+                <li><a class="dropdown-item" href="KA-TN.html">Bangalore, Mysore, Coorg & Ooty Tour</a></li>
+                <li><a class="dropdown-item" href="KA2.html">Deluxe Ooty, Coonoor, Coorg & Mysore Tour</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+    
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="About.html">About us</a></li>
+
+            <li class="nav-item"><a class="nav-link" href="Contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Itinerary Section -->
+  <section class="itinerary">
+    <h2>Coastal Karnataka and Goa Tour</h2>
+    <p class="text-center fs-5 mb-4" style="color: #ff610e;"></p>
+
+    <div class="day-card">
+      <h3>🌅 Day 1: Arrival & Sightseeing</h3>
+      <p>Morning pick-up from Mangalore railway station. Check in, freshen up, and proceed to <strong>Mahatobhara Sri Mangaladevi Temple</strong>, <strong>Kadri Shree Manjunatha Temple</strong>, <strong>Kudroli</strong>, <strong>St. Aloysius Chapel</strong>, and <strong>Panambur Beach</strong>. Overnight stay at Mangalore.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>🏖️ Day 2: Udupi (1 Night)</h3>
+      <p>After breakfast, proceed to Udupi. Visit <strong>Sri Krishna Math</strong> and <strong>Malpe Beach</strong>. Overnight stay in Udupi.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>🌊 Day 3: Udupi → Murdeshwar → Honavar → Gokarna (3 Nights)</h3>
+      <p>Proceed to Gokarna. Visit <strong>Om Beach</strong> (water sports at own cost), <strong>Mahabaleshwar Temple</strong>, enjoy a walking tour of Gokarna, and end with a <strong>sunset at Gokarna Beach</strong>. Overnight stay in Gokarna.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>🍹 Day 4: Gokarna → Goa</h3>
+      <p>Take a bus from Gokarna to Madgaon (4.5 hrs). From Madgaon, travel by cab to North Goa. Evening at leisure. Overnight stay in Goa.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>🚗 Day 5: Goa → Nashik</h3>
+      <p>Transfer from Goa to Nashik (10-hour drive). Overnight stay in Nashik.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>🛕 Day 6: Nashik → Trimbakeshwar → Shirdi</h3>
+      <p>Visit <strong>Trimbakeshwar Jyotirlinga Temple</strong>, then proceed to Shirdi. Check in, relax, and visit <strong>Sai Baba Temple</strong>. Overnight stay in Shirdi.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>🏞️ Day 7: Shirdi → Ajanta → Aurangabad</h3>
+      <p>Check out and visit <strong>Ajanta Caves</strong>. Proceed to Aurangabad and check in. Overnight stay in Aurangabad.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>🕌 Day 8: Aurangabad → Grishneshwar → Ellora → Drop</h3>
+      <p>Visit <strong>Grishneshwar Jyotirlinga</strong>, then explore <strong>Ellora Caves</strong>. Drop at Aurangabad station/airport.</p>
+    </div>
+
+    <!-- Package Section -->
+    <div class="package">
+      <h3>Package Price & Inclusions</h3>
+
+      <div class="d-flex flex-wrap justify-content-center gap-4">
+        <div class="package-card">
+          <h4>Total Package Cost</h4>
+          <p style="font-weight:bold; font-size:20px;">₹16,000 per head</p>
+          <p>AC Traveller for pick-up, drop & sightseeing<br>Comfortable hotel stays<br>Breakfast included<br>Tolls & Taxes included</p>
+        </div>
+      </div>
+
+      <p class="package-note">*Price applicable for minimum 2 travelers</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<footer class="bg-darkteal text-white pt-5 pb-4">
+  <div class="container">
+    <div class="row text-start">
+      <div class="col-md-4 mb-4">
+        <h4 class="text-orange fw-bold">Royal Tourism</h4>
+        <p>We provide safe, comfortable, and memorable travel experiences across India and abroad. Your journey is our responsibility.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h4 class="text-orange fw-bold">Quick Links</h4>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-decoration-none text-light">Home</a></li>
+          <li><a href="About.html" class="text-decoration-none text-light">About Us</a></li>
+    
+        </ul>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h4 class="text-orange fw-bold">Contact</h4>
+        <p>📞 +91 8240147994</p>
+        <p>📧 royaltourism863@gmail.com</p>
+      </div>
+    </div>
+    <div class="text-center border-top border-secondary pt-3">
+      <p class="text-secondary mb-0 fs-5">© 2025 Royal Tourism | All Rights Reserved | Created with ❤️ by Aavriti | Logo designed by <a href="https://www.claypixel.com/">claypixel.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Enable proper nested dropdown toggle on click
+  document.querySelectorAll('.dropdown-submenu > .dropdown-toggle').forEach(function(element){
+    element.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+
+      let submenu = this.nextElementSibling;
+
+      // Close other open submenus
+      document.querySelectorAll('.dropdown-submenu .dropdown-menu.show').forEach(function(openSubmenu){
+        if(openSubmenu !== submenu){
+          openSubmenu.classList.remove('show');
+        }
+      });
+
+      // Toggle current submenu
+      submenu.classList.toggle('show');
+    });
+  });
+
+  // Close all submenus when clicking outside
+  document.addEventListener('click', function(){
+    document.querySelectorAll('.dropdown-submenu .dropdown-menu.show').forEach(function(openSubmenu){
+      openSubmenu.classList.remove('show');
+    });
+  });
+</script>
+</body>
+</html>

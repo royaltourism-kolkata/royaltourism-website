@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karnataka Heritage Explorer: Hampi, Badami, Aihole & Bijapur</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #bafcff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .text-orange { color: #ff610e !important; }
+    .bg-orange { background-color: #ff610e !important; }
+    .bg-darkteal { background-color: #003c32 !important; }
+    .text-darkteal { color: #003c32 !important; }
+    .text-007278 { color: #007278 !important; }
+    .border-left-orange { border-left: 6px solid #ff610e; }
+    .feature-hover-scale:hover {
+      transform: scale(1.02);
+      transition: transform 0.2s ease;
+    }
+    .day-card {
+      border: 1px solid #ddd;
+      border-left: 6px solid #ff610e;
+      transition: transform 0.2s ease;
+    }
+    .day-card h3 {
+      font-size: 20px !important;
+      color: #007278 !important;
+      font-weight: 600;
+     
+    }
+    .subheading {
+      font-size: 18px;
+      color: #007278;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .day-card p { font-size: 18px; line-height: 1.6; margin-left: 28px; color: #333; }
+   /* Navbar styling */
+    .navbar-nav .nav-link { color: #333 !important; font-weight: 600; }
+    .navbar-nav .nav-link:hover { color: #ff610e !important; }
+
+    /* Nested dropdowns */
+    .dropdown-submenu {
+      position: relative;
+    }
+    .dropdown-submenu > .dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin: 0;
+     
+    min-width: 180px !important;
+    
+      display: none;
+    }
+    
+    .dropdown-submenu:hover > .dropdown-menu {
+      display: block;
+    }
+    .dropdown-submenu .dropdown-item {
+      white-space: normal; /* Allow wrapping instead of overflow */
+      overflow-wrap: break-word;
+    }
+    .dropdown-submenu .dropdown-item:hover {
+      color: #ff610e;
+      font-weight: bold;
+    }
+
+    /* Responsive: submenus stack under parent on small screens */
+    @media (max-width: 991px) {
+      .dropdown-submenu > .dropdown-menu {
+        left: 0;
+        top: 100%;
+        width:100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top contact header -->
+<div class="bg-orange text-white d-flex align-items-center px-4 py-2">
+  <div class="d-flex align-items-center me-4">
+    <img src="Contact.png" alt="Contact" width="22" height="22" class="me-2">
+    <span class="fw-bold text-monospace">+91 8240147994</span>
+  </div>
+  <div class="d-flex align-items-center">
+    <img src="E-mail.png" alt="E-mail" width="22" height="22" class="me-2">
+    <span class="fw-bold text-monospace">royaltourism863@gmail.com</span>
+  </div>
+</div>
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm px-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="logohorizontal.png" alt="Royal Tourism Logo" height="60"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav fw-bold">
+        <!-- Trips Main Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Trips</a>
+          <ul class="dropdown-menu">
+
+            <!-- International Tours -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">International Tours</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Bali.html">Bali Tour</a></li>
+                <li><a class="dropdown-item" href="Bangkok.html">Bangkok-Pattaya Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Holy Pilgrimage Tours -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Holy Pilgrimage Tours</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="WESTUP.html">Mathura, Vrindavan, Barsana & Agra Tour</a></li>
+                <li><a class="dropdown-item" href="KedarnathYatra.html">Badrinath & Kedarnath Tour</a></li>
+                <li><a class="dropdown-item" href="NORTH-MH.html">Shirdi, Ellora & Nashik Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Hill Station Tours -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Hill Station Tours</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="SpitiValley.html">Spiti Valley Tour</a></li>
+                <li><a class="dropdown-item" href="JK.html">Kashmir Tour</a></li>
+                <li><a class="dropdown-item" href="Kashmir.html">Offbeat Kashmir Tour</a></li>
+                <li><a class="dropdown-item" href="HP-PB.html">Dharamshala, Khajjiar, Dalhousie & Amritsar Tour</a></li>
+                <li><a class="dropdown-item" href="HP.html">Shimla & Manali Tour</a></li>
+                <li><a class="dropdown-item" href="AS-AR.html">Assam & Arunachal Pradesh Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Historic Trails -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Historic Trails</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="RJ.html">Royal Rajasthan Heritage Tour</a></li>
+                <li><a class="dropdown-item" href="K.html">Khajuraho & Jabalpur Tour</a></li>
+                <li><a class="dropdown-item" href="KA.html">Hampi, Badami, Aihole & Bijapur Tour</a></li>
+                <li><a class="dropdown-item" href="GJ.html">Gujarat Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Coastal Escapes -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Coastal Escapes</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="KL.html">Kerala Tour</a></li>
+                <li><a class="dropdown-item" href="KA-GA.html">Coastal Karnataka & Goa Tour</a></li>
+                <li><a class="dropdown-item" href="GOA.html">Luxury Goa Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Nature Trails -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Nature Trails</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="JH.html">Ranchi & Netarhat Tour</a></li>
+                <li><a class="dropdown-item" href="Northeast.html">Manipur, Mizoram & Nagaland Tour</a></li>
+                <li><a class="dropdown-item" href="KA-TN.html">Bangalore, Mysore, Coorg & Ooty Tour</a></li>
+                <li><a class="dropdown-item" href="KA2.html">Deluxe Ooty, Coonoor, Coorg & Mysore Tour</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+    
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="About.html">About us</a></li>
+
+            <li class="nav-item"><a class="nav-link" href="Contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<br>
+<br>
+  <!-- Itinerary Section -->
+   <h2 class="text-center text-teal fw-bold">Hampi , Badami , Aihole and Bijapur Tour</h2>
+    <p class="text-center text-orange fs-5 mb-4">Duration: 04 Nights / 05 Days</p>
+  <div class="container my-5 px-3">
+   
+
+    <div class="feature-hover-scale mb-4 day-card bg-white border-left-orange p-4 rounded shadow-sm">
+      <h3>🚆 Day 1: Arrival at Hospet & Hampi</h3>
+      <p>Early morning reach Hospet, pick up and reach Hampi hotel. Check-in, freshen up, and after breakfast start Hampi sightseeing: <strong>Virupaksha Temple, Kadale Kalu Ganesha, Sasive Kalu Ganesha, Krishna Temple, Lakshmi Narasimha, Badavi Linga, Sister Stones, Underground Temple, Mint House, Lotus Mahal, Elephant Stables, Hazara Rama Temple, Palace Area, Mahanavami Dibba, Queen’s Bath</strong>. Later enjoy coracle riding and boating. Return to hotel for overnight stay.</p>
+    </div>
+
+    <div class="feature-hover-scale mb-4 day-card bg-white border-left-orange p-4 rounded shadow-sm">
+      <h3>🏛️ Day 2: Full Day Hampi Sightseeing</h3>
+      <p>Visit <strong>Vijaya Vittala Temple (Stone Chariot), King’s Balance, Purandara Mantapa, Old Bridge Pillars</strong>. Have lunch on the way, then visit <strong>Tungabhadra Dam Garden & Musical Fountain</strong> in the evening. Return to hotel for overnight stay.</p>
+    </div>
+
+    <div class="feature-hover-scale mb-4 day-card bg-white border-left-orange p-4 rounded shadow-sm">
+      <h3>🚌 Day 3: Hampi → Badami → Aihole → Bijapur</h3>
+      <p>Early morning departure to Badami. Breakfast on the way. Visit <strong>Banashankari Temple, Badami Cave Temples</strong>. Lunch on the way. Then visit <strong>Mahakuteshwara Temple, Pattadakal Mallikarjuna, Virupaksha, Aihole Durgadagudi</strong>. Evening arrive at Bijapur and overnight stay.</p>
+    </div>
+
+    <div class="feature-hover-scale mb-4 day-card bg-white border-left-orange p-4 rounded shadow-sm">
+      <h3>🏰 Day 4: Bijapur Sightseeing</h3>
+      <p>After breakfast, visit <strong>Gol Gumbaz, Jamia Masjid, Ibrahim Roza, Big Cannon, Upari Burj, Kudalasangameshwara Temple, Basavanna Samadi</strong>. Enjoy dinner and overnight stay at Bijapur.</p>
+    </div>
+
+    <div class="feature-hover-scale mb-4 day-card bg-white border-left-orange p-4 rounded shadow-sm">
+      <h3>🚉 Day 5: Departure</h3>
+      <p>Early morning breakfast and check out. Reach Hospet Junction to board your train for return journey with delightful experiences.</p>
+    </div>
+
+    <!-- Package Section -->
+    <div class="package mt-5">
+      <h3 class="text-center text-darkteal mb-4">Package Price & Inclusions</h3>
+      <div class="d-flex flex-wrap justify-content-center gap-4">
+        <div class="p-4 rounded shadow-sm" style="background:#1bbcc5; color:#003c32; width:260px; text-align:center;">
+          <h4>Package Cost</h4>
+          <p style="font-weight:bold; font-size:20px;">₹10,500 per person</p>
+          <p> Pick & Drop from Hospet Junction<br>
+              Standard Category Hotel (Twin/Triple Sharing)<br>
+              AC Transportation for Sightseeing<br>
+              4 Breakfast & 4 Dinner (in hotel)<br>
+              All Toll Taxes & Parking</p>
+        </div>
+        <div class="p-4 rounded shadow-sm" style="background:#f8f8f8; width:260px; text-align:center;">
+          <h4>Exclusions</h4>
+          <p>Train Tickets<br>
+             Meals other than mentioned<br>
+             Mineral Water<br>
+             Entry Tickets (if any)<br>
+             Any Personal Expenses<br>
+             Activities Not Mentioned in Itinerary</p>
+        </div>
+      </div>
+      <p class="package-note text-center mt-3 fst-italic text-darkteal">*Price applicable for minimum 4 travellers*</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+<footer class="bg-darkteal text-white pt-5 pb-4">
+  <div class="container">
+    <div class="row text-start">
+      <div class="col-md-4 mb-4">
+        <h4 class="text-orange fw-bold">Royal Tourism</h4>
+        <p>We provide safe, comfortable, and memorable travel experiences across India and abroad. Your journey is our responsibility.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h4 class="text-orange fw-bold">Quick Links</h4>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-decoration-none text-light">Home</a></li>
+          <li><a href="About.html" class="text-decoration-none text-light">About Us</a></li>
+    
+        </ul>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h4 class="text-orange fw-bold">Contact</h4>
+        <p>📞 +91 8240147994</p>
+        <p>📧 royaltourism863@gmail.com</p>
+      </div>
+    </div>
+    <div class="text-center border-top border-secondary pt-3">
+      <p class="text-secondary mb-0 fs-5">© 2025 Royal Tourism | All Rights Reserved | Created with ❤️ by Aavriti | Logo designed by <a href="https://www.claypixel.com/">claypixel.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Enable proper nested dropdown toggle on click
+  document.querySelectorAll('.dropdown-submenu > .dropdown-toggle').forEach(function(element){
+    element.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+
+      let submenu = this.nextElementSibling;
+
+      // Close other open submenus
+      document.querySelectorAll('.dropdown-submenu .dropdown-menu.show').forEach(function(openSubmenu){
+        if(openSubmenu !== submenu){
+          openSubmenu.classList.remove('show');
+        }
+      });
+
+      // Toggle current submenu
+      submenu.classList.toggle('show');
+    });
+  });
+
+  // Close all submenus when clicking outside
+  document.addEventListener('click', function(){
+    document.querySelectorAll('.dropdown-submenu .dropdown-menu.show').forEach(function(openSubmenu){
+      openSubmenu.classList.remove('show');
+    });
+  });
+</script>
+</body>
+</html>
