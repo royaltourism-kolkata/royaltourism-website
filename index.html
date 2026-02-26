@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Tourism</title>
+  <!-- ✅ Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ <style>
+  body {
+    background-color: #bafcff;
+    font-family: Arial, sans-serif;
+  }
+  .text-orange { color: #ff610e; }
+  .bg-orange { background-color: #ff610e; }
+  .bg-darkteal { background-color: #003c32; }
+  .bg-lightteal { background-color: #bafcff; }
+  .bg-burntorange { background-color: #e16321; }
+  .text-burntorange { color: #e16321; }
+
+  /* 🔸 Feature card hover effect */
+  .feature-card:hover {
+    background-color: #bafcff !important;
+    color: #e16321 !important;
+    border-color: #004d4d !important;
+  }
+  .feature-card img {
+    width: 50px;
+    height: 50px;
+  }
+  .feature-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+  }
+
+ /* Navbar styling */
+    .navbar-nav .nav-link { color: #333 !important; font-weight: 600; }
+    .navbar-nav .nav-link:hover { color: #ff610e !important; }
+
+    /* Nested dropdowns */
+    .dropdown-submenu {
+      position: relative;
+    }
+    .dropdown-submenu > .dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin: 0;
+     
+    min-width: 180px !important;
+    
+      display: none;
+    }
+    
+    .dropdown-submenu:hover > .dropdown-menu {
+      display: block;
+    }
+    .dropdown-submenu .dropdown-item {
+      white-space: normal; /* Allow wrapping instead of overflow */
+      overflow-wrap: break-word;
+    }
+    .dropdown-submenu .dropdown-item:hover {
+      color: #ff610e;
+      font-weight: bold;
+    }
+ /* HERO SECTION */
+.hero-section {
+  padding: 100px 0;
+}
+`
+.hero-image {
+  max-height: 650px;
+  width: 110%;   /* 10% larger like you requested */
+  object-fit: contain;
+}
+
+.hero-content {
+  max-width: 520px;  /* Controls paragraph width */
+}
+
+/* Small Orange Heading */
+.hero-subtitle {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #ff610e;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+/* Main Heading */
+.hero-title {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #003c32;
+  margin-bottom: 25px;
+}
+
+/* Paragraph */
+.hero-description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #222;
+}
+.hero-section {
+  padding-bottom: 120px;   /* Creates visual separation from footer */
+}
+.feature-icon {
+  width: 75px;
+  height: 75px;
+  margin-bottom: 18px;
+}
+
+.feature-card img {
+  width: 30px;
+  height: 30px;
+}
+.feature-card {
+  border-radius: 20px;
+  padding: 35px 20px !important;
+  min-height: 200px; 
+  * Forces square feel */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+    /* Responsive: submenus stack under parent on small screens */
+    @media (max-width: 991px) {
+      .dropdown-submenu > .dropdown-menu {
+        left: 0;
+        top: 100%;
+        width:100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top contact header -->
+<div class="bg-orange text-white d-flex align-items-center px-4 py-2" >
+  <div class="d-flex align-items-center me-4">
+    <img src="Contact.png" alt="Contact" width="22" height="22" class="me-2">
+    <span class="fw-bold text-monospace">+91 8240147994</span>
+  </div>
+  <div class="d-flex align-items-center" style="      overflow-wrap: break-word;
+">
+    <img src="E-mail.png" alt="E-mail" width="22" height="22" class="me-2">
+    <span class="fw-bold text-monospace">royaltourism863@gmail.com</span>
+  </div>
+</div>
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm px-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="logohorizontal.png" alt="Royal Tourism Logo" height="60"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav fw-bold">
+        <!-- Trips Main Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Trips</a>
+          <ul class="dropdown-menu">
+
+            <!-- International Tours -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">International Tours</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Bali.html">Bali Tour</a></li>
+                <li><a class="dropdown-item" href="Bangkok.html">Bangkok-Pattaya Tour</a></li>
+                 <li><a class="dropdown-item" href="Dubai.html">Luxury Dubai Tour</a></li>
+                <li><a class="dropdown-item" href="K Lampur.html">Kuala Lampurand and Genting Islands Tour</a></li> 
+                <li><a class="dropdown-item" href="Maldives.html">Luxury Maldives Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Holy Pilgrimage Tours -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Holy Pilgrimage Tours</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="WESTUP.html">Mathura, Vrindavan, Barsana & Agra Tour</a></li>
+                <li><a class="dropdown-item" href="KedarnathYatra.html">Badrinath & Kedarnath Tour</a></li>
+                <li><a class="dropdown-item" href="NORTH-MH.html">Shirdi, Ellora & Nashik Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Hill Station Tours -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Hill Station Tours</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="SpitiValley.html">Spiti Valley Tour</a></li>
+                <li><a class="dropdown-item" href="JK.html">Kashmir Tour</a></li>
+                <li><a class="dropdown-item" href="Kashmir.html">Offbeat Kashmir Tour</a></li>
+                <li><a class="dropdown-item" href="HP-PB.html">Dharamshala, Khajjiar, Dalhousie & Amritsar Tour</a></li>
+                <li><a class="dropdown-item" href="HP.html">Shimla & Manali Tour</a></li>
+                <li><a class="dropdown-item" href="AS-AR.html">Assam & Arunachal Pradesh Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Historic Trails -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Historic Trails</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="RJ.html">Royal Rajasthan Heritage Tour</a></li>
+                <li><a class="dropdown-item" href="K.html">Khajuraho & Jabalpur Tour</a></li>
+                <li><a class="dropdown-item" href="KA.html">Hampi, Badami, Aihole & Bijapur Tour</a></li>
+                <li><a class="dropdown-item" href="GJ.html">Gujarat Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Coastal Escapes -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Coastal Escapes</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="KL.html">Kerala Tour</a></li>
+                <li><a class="dropdown-item" href="KA-GA.html">Coastal Karnataka & Goa Tour</a></li>
+                <li><a class="dropdown-item" href="GOA.html">Luxury Goa Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Nature Trails -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Nature Trails</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="JH.html">Ranchi & Netarhat Tour</a></li>
+                <li><a class="dropdown-item" href="Northeast.html">Manipur, Mizoram & Nagaland Tour</a></li>
+                <li><a class="dropdown-item" href="KA-TN.html">Bangalore, Mysore, Coorg & Ooty Tour</a></li>
+                <li><a class="dropdown-item" href="KA2.html">Deluxe Ooty, Coonoor, Coorg & Mysore Tour</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+    
+        <li class="nav-item"><a class="nav-link" href="About.html">About us</a></li>
+
+            <li class="nav-item"><a class="nav-link" href="Contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ <section class="hero-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- LEFT SIDE – IMAGE (Bigger & Dominant) -->
+      <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+        <img src="intro-page.png" alt="Intro Image" class="hero-image img-fluid">
+      </div>
+
+      <!-- RIGHT SIDE – CONTENT -->
+      <div class="col-lg-6 hero-content">
+
+        <h5 class="hero-subtitle">
+          START YOUR JOURNEY TODAY
+        </h5>
+
+        <h1 class="hero-title">
+          With Royal Tourism!
+        </h1>
+
+        <p class="hero-description">
+          Royal Tourism is here to make your holidays easy, safe, and unforgettable.
+          We plan every trip with care, whether you want to explore India or travel abroad.
+          From comfortable stays to smooth transport, we handle all the details so you can simply enjoy the journey.
+          With friendly service and thoughtful planning, we turn your travel dreams into beautiful memories.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- 🔹 Feature Cards Section -->
+<section class="pb-5" style="padding-top: 20px;">
+  <div class="container">
+
+    <div class="row mt-5 mb-5 g-4 text-center justify-content-center">
+
+      <div class="col-lg-3 col-md-6 px-3 d-flex">
+        <div class="card feature-card bg-burntorange text-white border-0 shadow w-100">
+          <div class="feature-icon">
+            <img src="1.png" alt="Special Activities">
+          </div>
+          <h6 class="fw-bold mt-3">Special Activities</h6>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 px-3 d-flex">
+        <div class="card feature-card bg-burntorange text-white border-0 shadow w-100">
+          <div class="feature-icon">
+            <img src="4.png" alt="Proper Guideline">
+          </div>
+          <h6 class="fw-bold mt-3">Proper Guideline</h6>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 px-3 d-flex">
+        <div class="card feature-card bg-burntorange text-white border-0 shadow w-100">
+          <div class="feature-icon">
+            <img src="3.png" alt="Travel Arrangement">
+          </div>
+          <h6 class="fw-bold mt-3">Travel Arrangement</h6>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 px-3 d-flex">
+        <div class="card feature-card bg-burntorange text-white border-0 shadow w-100">
+          <div class="feature-icon">
+            <img src="2.png" alt="Location Manager">
+          </div>
+          <h6 class="fw-bold mt-3">Location Manager</h6>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+  <!-- Footer -->
+<footer class="bg-darkteal text-white pt-5 pb-4">
+  <div class="container">
+    <div class="row text-start">
+      <div class="col-md-4 mb-4">
+        <h4 class="text-orange fw-bold">Royal Tourism</h4>
+        <p>We provide safe, comfortable, and memorable travel experiences across India and abroad. Your journey is our responsibility.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h4 class="text-orange fw-bold">Quick Links</h4>
+        <ul class="list-unstyled">
+          <li><a href="About.html" class="text-decoration-none text-light">About Us</a></li>
+              <li><a href="Contact-us.html" class="text-decoration-none text-light">Contact Us</a></li>
+
+        </ul>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h4 class="text-orange fw-bold">Contact</h4>
+        <p>📞 +91 8240147994</p>
+        <p>📧 royaltourism863@gmail.com</p>
+      </div>
+    </div>
+    <div class="text-center border-top border-secondary pt-3">
+      <p class="text-secondary mb-0 fs-5">© 2025 Royal Tourism | All Rights Reserved | Created with ❤️ by Aavriti | Logo designed by <a href="https://www.claypixel.com/">claypixel.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Enable proper nested dropdown toggle on click
+  document.querySelectorAll('.dropdown-submenu > .dropdown-toggle').forEach(function(element){
+    element.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+
+      let submenu = this.nextElementSibling;
+
+      // Close other open submenus
+      document.querySelectorAll('.dropdown-submenu .dropdown-menu.show').forEach(function(openSubmenu){
+        if(openSubmenu !== submenu){
+          openSubmenu.classList.remove('show');
+        }
+      });
+
+      // Toggle current submenu
+      submenu.classList.toggle('show');
+    });
+  });
+
+  // Close all submenus when clicking outside
+  document.addEventListener('click', function(){
+    document.querySelectorAll('.dropdown-submenu .dropdown-menu.show').forEach(function(openSubmenu){
+      openSubmenu.classList.remove('show');
+    });
+  });
+</script>
+</body>
+</html>

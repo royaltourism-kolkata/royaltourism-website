@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Tourism - Enchanting Gujarat Tour</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #bafcff;
+      font-family: Arial, sans-serif;
+    }
+
+    .bg-orange { background-color: #ff610e !important; }
+    .text-orange { color: #ff610e !important; }
+    .text-teal { color: #003c32 !important; }
+
+    .day-card {
+      border-left: 6px solid #ff610e;
+      transition: transform 0.2s ease;
+      font-size: 17px;
+    }
+    .day-card:hover {
+      transform: scale(1.02);
+    }
+
+    footer {
+      background-color: #003c32;
+      color: #fff;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #ddd;
+    }
+
+    footer a:hover {
+      color: #ff610e;
+    }
+
+    /* Navbar styling */
+    .navbar-nav .nav-link { color: #333 !important; font-weight: 600; }
+    .navbar-nav .nav-link:hover { color: #ff610e !important; }
+
+    /* Nested dropdowns */
+    .dropdown-submenu {
+      position: relative;
+    }
+    .dropdown-submenu > .dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin: 0;
+     
+    min-width: 180px !important;
+    
+      display: none;
+    }
+    
+    .dropdown-submenu:hover > .dropdown-menu {
+      display: block;
+    }
+    .dropdown-submenu .dropdown-item {
+      white-space: normal; /* Allow wrapping instead of overflow */
+      overflow-wrap: break-word;
+    }
+    .dropdown-submenu .dropdown-item:hover {
+      color: #ff610e;
+      font-weight: bold;
+    }
+
+    /* Responsive: submenus stack under parent on small screens */
+    @media (max-width: 991px) {
+      .dropdown-submenu > .dropdown-menu {
+        left: 0;
+        top: 100%;
+        width:100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top contact header -->
+<div class="bg-orange text-white d-flex align-items-center px-4 py-2">
+  <div class="d-flex align-items-center me-4">
+    <img src="Contact.png" alt="Contact" width="22" height="22" class="me-2">
+    <span class="fw-bold text-monospace">+91 8240147994</span>
+  </div>
+  <div class="d-flex align-items-center">
+    <img src="E-mail.png" alt="E-mail" width="22" height="22" class="me-2">
+    <span class="fw-bold text-monospace">royaltourism863@gmail.com</span>
+  </div>
+</div>
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm px-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="logohorizontal.png" alt="Royal Tourism Logo" height="60"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav fw-bold">
+        <!-- Trips Main Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Trips</a>
+          <ul class="dropdown-menu">
+
+            <!-- International Tours -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">International Tours</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Bali.html">Bali Tour</a></li>
+                <li><a class="dropdown-item" href="Bangkok.html">Bangkok-Pattaya Tour</a></li>
+                 <li><a class="dropdown-item" href="Dubai.html">Luxury Dubai Tour</a></li>
+                <li><a class="dropdown-item" href="K Lampur.html">Kuala Lampurand and Genting Islands Tour</a></li> 
+                <li><a class="dropdown-item" href="Maldives.html">Luxury Maldives Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Holy Pilgrimage Tours -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Holy Pilgrimage Tours</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="WESTUP.html">Mathura, Vrindavan, Barsana & Agra Tour</a></li>
+                <li><a class="dropdown-item" href="KedarnathYatra.html">Badrinath & Kedarnath Tour</a></li>
+                <li><a class="dropdown-item" href="NORTH-MH.html">Shirdi, Ellora & Nashik Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Hill Station Tours -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Hill Station Tours</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="SpitiValley.html">Spiti Valley Tour</a></li>
+                <li><a class="dropdown-item" href="JK.html">Kashmir Tour</a></li>
+                <li><a class="dropdown-item" href="Kashmir.html">Offbeat Kashmir Tour</a></li>
+                <li><a class="dropdown-item" href="HP-PB.html">Dharamshala, Khajjiar, Dalhousie & Amritsar Tour</a></li>
+                <li><a class="dropdown-item" href="HP.html">Shimla & Manali Tour</a></li>
+                <li><a class="dropdown-item" href="AS-AR.html">Assam & Arunachal Pradesh Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Historic Trails -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Historic Trails</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="RJ.html">Royal Rajasthan Heritage Tour</a></li>
+                <li><a class="dropdown-item" href="K.html">Khajuraho & Jabalpur Tour</a></li>
+                <li><a class="dropdown-item" href="KA.html">Hampi, Badami, Aihole & Bijapur Tour</a></li>
+                <li><a class="dropdown-item" href="GJ.html">Gujarat Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Coastal Escapes -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Coastal Escapes</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="KL.html">Kerala Tour</a></li>
+                <li><a class="dropdown-item" href="KA-GA.html">Coastal Karnataka & Goa Tour</a></li>
+                <li><a class="dropdown-item" href="GOA.html">Luxury Goa Tour</a></li>
+              </ul>
+            </li>
+
+            <!-- Nature Trails -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Nature Trails</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="JH.html">Ranchi & Netarhat Tour</a></li>
+                <li><a class="dropdown-item" href="Northeast.html">Manipur, Mizoram & Nagaland Tour</a></li>
+                <li><a class="dropdown-item" href="KA-TN.html">Bangalore, Mysore, Coorg & Ooty Tour</a></li>
+                <li><a class="dropdown-item" href="KA2.html">Deluxe Ooty, Coonoor, Coorg & Mysore Tour</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+    
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="About.html">About us</a></li>
+
+            <li class="nav-item"><a class="nav-link" href="Contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Itinerary Section -->
+  <section class="container my-5">
+    <h2 class="text-center text-teal fw-bold">7-Day Gujarat Tour</h2>
+<p class="text-center fs-5 mb-4" style="color:#ff610e;">Duration: 06 Nights / 07 Days</p>
+
+    <div class="row gy-4">
+
+      <!-- Day 1 -->
+      <div class="col-12">
+        <div class="card day-card p-4 shadow-sm">
+          <h5 class="text-teal fw-bold mb-2">🌅 Day 01: Arrival at Vadodara</h5>
+          <p>Welcome to the cultural heart of Gujarat! Upon arrival at Vadodara, check in to your hotel and relax after your journey. Spend the rest of the day at leisure, exploring nearby places or simply unwinding in comfort. 🏨</p>
+        </div>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="col-12">
+        <div class="card day-card p-4 shadow-sm">
+          <h5 class="text-teal fw-bold mb-2">🗿 Day 02: Statue of Unity & Sardar Sarovar Dam</h5>
+          <p>After breakfast, begin your day with an excursion to the iconic Statue of Unity, one of India’s proudest landmarks. First, visit the Sardar Sarovar Dam, marveling at its vast engineering and scenic surroundings. Later, explore the majestic Statue of Unity, and don’t miss the evening light & sound show. 🌆 Return to Vadodara for an overnight stay. 💤</p>
+        </div>
+      </div>
+
+      <!-- Day 3 -->
+      <div class="col-12">
+        <div class="card day-card p-4 shadow-sm">
+          <h5 class="text-teal fw-bold mb-2">🕌 Day 03: Vadodara → Ahmedabad | City Sightseeing</h5>
+          <p>Enjoy your breakfast and check out from the hotel. Drive to Ahmedabad, Gujarat’s vibrant heritage city. Visit the serene Akshardham Temple (closed on Mondays), the historic Hathee Singh Jain Temple, and the inspiring Sabarmati Ashram, where Mahatma Gandhi once lived. End your day with a visit to the grand Narendra Modi Stadium, the world’s largest cricket arena. 🏏 Overnight stay in Ahmedabad. 🌃</p>
+        </div>
+      </div>
+
+      <!-- Day 4 -->
+      <div class="col-12">
+        <div class="card day-card p-4 shadow-sm">
+          <h5 class="text-teal fw-bold mb-2">☀️ Day 04: Ahmedabad → Patan | Sightseeing</h5>
+          <p>After breakfast, check out and head toward Patan, a city of exquisite craftsmanship. Explore the breathtaking Rani Ki Vav (Queen’s Stepwell) which is a UNESCO World Heritage Site, followed by a visit to the beautiful Modhera Sun Temple, known for its intricate architecture. 🏛️ Later, continue your journey to Bhuj and check in to your hotel. Overnight stay in Bhuj. 🏕️</p>
+        </div>
+      </div>
+
+      <!-- Day 5 -->
+      <div class="col-12">
+        <div class="card day-card p-4 shadow-sm">
+          <h5 class="text-teal fw-bold mb-2">🏰 Day 05: Full-Day Bhuj Sightseeing</h5>
+          <p>Start your morning early at 7 AM and have breakfast by 8. Begin your sightseeing adventure with a visit to Smritivan Earthquake Memorial and Museum, followed by the historical Chattardi, Aina Mahal, and Prag Mahal. 🕍 After lunch, explore the divine Swaminarayan Temple, Trimandir, and the grand Adiyogi Statue. Return to your hotel for a relaxing night. 🌙</p>
+        </div>
+      </div>
+
+      <!-- Day 6 -->
+      <div class="col-12">
+        <div class="card day-card p-4 shadow-sm">
+          <h5 class="text-teal fw-bold mb-2">🏜️ Day 06: Bhuj → Kalo Dungar → Dholavira → White Desert</h5>
+          <p>After breakfast, embark on an unforgettable journey toward the Rann of Kutch, driving through the scenic route lovingly called the “Road to Heaven.” En route, stop at the charming handicraft village of Gandhi Nu Gam, famous for its local art. Check in to your stay near the White Desert, enjoy lunch, and in the evening, head to the Rann Utsav. Witness the breathtaking sunset over the salt flats and soak in the cultural programs and artisan bazaars. 🎭 Overnight stay at the Rann. ⛺</p>
+        </div>
+      </div>
+
+      <!-- Day 7 -->
+      <div class="col-12">
+        <div class="card day-card p-4 shadow-sm">
+          <h5 class="text-teal fw-bold mb-2">🌄 Day 07: Rann Utsav → Bhuj | Departure</h5>
+          <p>Wake up early to witness the beautiful sunrise over the White Desert ,an unique sight that you’ll remember forever. 🌞 After breakfast, drive back to Bhuj and proceed to the airport or railway station for your return journey home, carrying memories of Gujarat’s culture, color, and charm. 💛</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Package Section -->
+  <section class="container my-5">
+    <h3 class="text-center text-teal fw-bold mb-4">Package Cost & Inclusions</h3>
+    <div class="row justify-content-center g-4">
+      <div class="col-md-5">
+        <div class="card text-center text-teal shadow-sm" style="background:#1bbcc5;">
+          <div class="card-body">
+            <h4 class="fw-bold">Package Cost</h4>
+            <p class="fs-4 fw-bold">₹24,000 per person</p>
+            <ul class="list-unstyled">
+              <li>Pick & Drop</li>
+              <li>Hotel Stay (Twin/Triple Sharing)</li>
+              <li>Breakfasts & Dinners</li>
+              <li>AC Cab</li>
+              <li>All Transfers</li>
+              <li>Toll tax and parking</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="card text-center shadow-sm" style="background:#f8f8f8;">
+          <div class="card-body">
+            <h4 class="fw-bold text-teal">Exclusions</h4>
+            <ul class="list-unstyled">
+          
+              <li>Train / Flight Fare</li>
+              <li>Personal Expenses</li>
+              <li>Union cab/Pony/etc</li>
+        
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="text-center fst-italic text-teal mt-3">*Price applicable for minimum 4 travellers.* </p>
+  </section>
+
+  <!-- Footer -->
+<footer class="bg-darkteal text-white pt-5 pb-4">
+  <div class="container">
+    <div class="row text-start">
+      <div class="col-md-4 mb-4">
+        <h4 class="text-orange fw-bold">Royal Tourism</h4>
+        <p>We provide safe, comfortable, and memorable travel experiences across India and abroad. Your journey is our responsibility.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h4 class="text-orange fw-bold">Quick Links</h4>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-decoration-none text-light">Home</a></li>
+          <li><a href="About.html" class="text-decoration-none text-light">About Us</a></li>
+   
+        </ul>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h4 class="text-orange fw-bold">Contact</h4>
+        <p>📞 +91 8240147994</p>
+        <p>📧 royaltourism863@gmail.com</p>
+      </div>
+    </div>
+    <div class="text-center border-top border-secondary pt-3">
+      <p class="text-secondary mb-0 fs-5">© 2025 Royal Tourism | All Rights Reserved | Created with ❤️ by Aavriti | Logo designed by <a href="https://www.claypixel.com/">claypixel.com</a></p>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Enable proper nested dropdown toggle on click
+  document.querySelectorAll('.dropdown-submenu > .dropdown-toggle').forEach(function(element){
+    element.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+
+
+      let submenu = this.nextElementSibling;
+
+
+      // Close other open submenus
+      document.querySelectorAll('.dropdown-submenu .dropdown-menu.show').forEach(function(openSubmenu){
+        if(openSubmenu !== submenu){
+          openSubmenu.classList.remove('show');
+        }
+      });
+
+
+      // Toggle current submenu
+      submenu.classList.toggle('show');
+    });
+  });
+
+
+  // Close all submenus when clicking outside
+  document.addEventListener('click', function(){
+    document.querySelectorAll('.dropdown-submenu .dropdown-menu.show').forEach(function(openSubmenu){
+      openSubmenu.classList.remove('show');
+    });
+  });
+</script>
+</body>
+</html>
+
+
+
